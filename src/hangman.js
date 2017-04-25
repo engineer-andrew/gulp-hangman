@@ -72,9 +72,7 @@ hangman.checkForGuessedLetter = function(letter) {
 };
 
 hangman.closeHelp = function() {
-    var helptext = document.getElementById('helptext');
-    helptext.style.display = 'none';
-    document.body.appendChild(helptext);
+    document.getElementById('helpText').style.display = 'none';
     document.body.removeChild(document.getElementById('mask'));
 };
 
@@ -166,7 +164,7 @@ hangman.getNewWord = function() {
 
 hangman.init = function() {
     document.getElementById('loading').style.display = 'none';
-    document.getElementById('helptext').style.display = 'none';
+    document.getElementById('helpText').style.display = 'none';
     document.getElementById('play').style.display = 'inline-block';
     document.getElementById('clear').style.display = 'inline-block';
     document.getElementById('help').onclick = hangman.showHelp;
@@ -174,7 +172,7 @@ hangman.init = function() {
     document.getElementById('play').onclick = hangman.newGame;
 };
 
-hangman.newGame = function() {    
+hangman.newGame = function() {
     hangman.badGuesses = 0;
     hangman.correctGuesses = 0;
     hangman.getNewWord();    
@@ -187,12 +185,9 @@ hangman.showHelp = function() {
     var mask = document.createElement('div');
     mask.id = 'mask';    
 
-    var helptext = document.getElementById('helptext');
-    mask.appendChild(helptext);
-
     document.body.appendChild(mask);
     
-    document.getElementById('helptext').style.display = 'block';
+    document.getElementById('helpText').style.display = 'block';
 };
 
 // When the game is over, display missing letters in red

@@ -9102,17 +9102,31 @@ button.close {
 }
 
 #mask {
-    height: 100%;
-    width: 100%;
-    opacity: .5;
     background-color: black;
+    opacity: .5;
     position: absolute;
+    z-index: 9001;
     top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
-#helptext {
+#helpText {
     background-color: white;
     border-radius: 5px;
+    z-index: 9002;
+    position: relative;
+}
+
+#helpText .row {
+    padding: 1em;
+}
+
+.top-right {
+    position: absolute;
+    top: .25em;
+    right: .25em;
 }
 
 #play {
@@ -9121,5 +9135,14 @@ button.close {
 
 #word {
     font-size: 4em;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.jumbotron {
+    position: relative;
+    margin-top: 1em;
 }
 /*# sourceMappingURL=maps/site.min.css.map */

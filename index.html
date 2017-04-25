@@ -12,7 +12,7 @@
     <div class="container">
         <div class="jumbotron">
             <h1 class="text-center">Hangman</h1>
-            <i class="fa fa-info-circle fa-2x pull-right pull-top" id="help"></i>
+            <i class="fa fa-info-circle fa-2x top-right clickable" id="help"></i>
         </div>        
         <p id="loading">Game loading. . .</p>
         <div class="row">
@@ -37,10 +37,12 @@
             </div>            
         </div>
     </div>
-    <div id="helptext" class="container">
-        <h2>How to Play</h2>
-        <button class="btn btn-primary" id="close" type="button">Close</button>
-        <p>Hangman is a word-guessing game. Click or tap New Game to display the letters of the alphabet and a row of dashes indicating the number of letters to be guessed. Click or tap a letter. If it's in the word, it replaces the dash(es). Each wrong guess results in a stroke being added to a gallows and its victim. Your role is to guess the word correctly before the victim meets his grisly fate.</p>
+    <div id="helpText" class="container">
+        <div class="row">
+            <h2>How to Play</h2>
+            <i class="fa fa-2x fa-window-close clickable top-right" aria-hidden="true" id="close"></i>
+            <p>Hangman is a word-guessing game. Click or tap New Game to display the letters of the alphabet and a row of dashes indicating the number of letters to be guessed. Click or tap a letter. If it's in the word, it replaces the dash(es). Each wrong guess results in a stroke being added to a gallows and its victim. Your role is to guess the word correctly before the victim meets his grisly fate.</p>
+        </div>
     </div>
     <script>
         hangman.init();

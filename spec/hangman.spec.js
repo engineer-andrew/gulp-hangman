@@ -760,6 +760,11 @@ describe('Hangman', () => {
             close.onclick = null;
             close.style.display = 'none';
             document.body.appendChild(close);
+
+            var helpText = document.createElement('div');
+            helpText.id = 'helpText';
+            helpText.style.display = 'block';
+            document.body.appendChild(helpText);
             
             var mask = document.createElement('div');
             mask.id = 'mask';
