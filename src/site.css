@@ -1,0 +1,28 @@
+#letters > div {
+    display: inline;
+    padding: 1em;
+    margin: .5em;
+    border-radius: 5px;
+}
+
+#mask {
+    height: 100%;
+    width: 100%;
+    opacity: .5;
+    background-color: black;
+    position: absolute;
+    top: 0;
+}
+
+#helptext {
+    background-color: white;
+    border-radius: 5px;
+}
+
+#play {
+    margin-right: 2em;
+}
+
+#word {
+    font-size: 4em;
+}

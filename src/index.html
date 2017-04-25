@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html class="no-js">
+<head>
+<meta charset="utf-8">
+<title>Hangman</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="../dist/stylesheets/site.min.css" rel="stylesheet" type="text/css">
+<script src="../dist/scripts/site.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="text-center">Hangman</h1>
+            <i class="fa fa-info-circle fa-2x pull-right pull-top" id="help"></i>
+        </div>        
+        <p id="loading">Game loading. . .</p>
+        <div class="row">
+            <div class="text-center">
+                <canvas id="canvas" width="200" height="200">Sorry, your browser needs to support canvas for this game.</canvas>                
+            </div>
+        </div>
+        <div class="row">
+            <div class="text-center">
+                <p id="word"></p>
+            </div>
+        </div>        
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3 text-center">
+                <div id="letters"></div>
+            </div>
+        </div>        
+        <div class="row">
+            <div class="text-center">
+                <button type="button" class="btn btn-primary" id="play">New Game</button>
+                <button type="button" class="btn btn-warning" id="clear">Clear Score</button>
+            </div>            
+        </div>
+    </div>
+    <div id="helptext" class="container">
+        <h2>How to Play</h2>
+        <button class="btn btn-primary" id="close" type="button">Close</button>
+        <p>Hangman is a word-guessing game. Click or tap New Game to display the letters of the alphabet and a row of dashes indicating the number of letters to be guessed. Click or tap a letter. If it's in the word, it replaces the dash(es). Each wrong guess results in a stroke being added to a gallows and its victim. Your role is to guess the word correctly before the victim meets his grisly fate.</p>
+    </div>
+    <script>
+        hangman.init();
+    </script>    
+</body>
+</html>

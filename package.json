@@ -1,0 +1,31 @@
+{
+  "name": "gulp-hangman",
+  "version": "1.0.0",
+  "description": "A simple Hangman game built to demonstrate how to use Gulp",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "keywords": [
+    "hangman",
+    "gulp"
+  ],
+  "author": "Andrew Webster <andrew.webster@rocketmail.com> (http://answersicouldntfindanywhereelse.blogspot.com/)",
+  "license": "ISC",
+  "devDependencies": {
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-jshint": "^2.0.4",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-uglify": "^2.1.2",
+    "gulp-util": "^3.0.8",
+    "jshint": "^2.9.4",
+    "jshint-stylish": "^2.2.1"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.2.1"
+  }
+}
