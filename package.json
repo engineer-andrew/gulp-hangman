@@ -21,7 +21,8 @@
     "gulp-uglify": "^2.1.2",
     "gulp-util": "^3.0.8",
     "jshint": "^2.9.4",
-    "jshint-stylish": "^2.2.1"
+    "jshint-stylish": "^2.2.1",
+    "uglify-js-harmony": "^2.7.5"
   },
   "dependencies": {
     "bootstrap": "^3.3.7",

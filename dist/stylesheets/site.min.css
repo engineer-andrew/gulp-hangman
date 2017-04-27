@@ -9137,6 +9137,10 @@ button.close {
     font-size: 4em;
 }
 
+#word > span {
+    margin-right: .25em;
+}
+
 .clickable {
     cursor: pointer;
 }
@@ -9144,5 +9148,14 @@ button.close {
 .jumbotron {
     position: relative;
     margin-top: 1em;
+}
+
+.margin-bottom-2em {
+    margin-bottom: 2em;
+}
+
+.missed-letter {
+    color: red;
+    text-transform: uppercase;
 }
 /*# sourceMappingURL=maps/site.min.css.map */

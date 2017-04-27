@@ -3,10 +3,11 @@ var gulp = require('gulp');
 var jshint = require('gulp-jshint');
 var concat = require('gulp-concat');
 var jshintStylish = require('jshint-stylish');
-var uglify = require('gulp-uglify');
+var minifier = require('gulp-uglify/minifier');
 var del = require('del');
 var sourcemaps = require('gulp-sourcemaps');
 var gutil = require('gulp-util');
+var harmony = require('uglify-js-harmony');
 
 gulp.task('delete:dist', () => {
     return del(['dist']);
@@ -14,7 +15,7 @@ gulp.task('delete:dist', () => {
 
 gulp.task('lint', ['delete:dist'], () => {
     return gulp.src(['src/hangman.js'])
-        .pipe(jshint())
+        .pipe(jshint({esversion: 6}))
         .pipe(jshint.reporter(jshintStylish))
         .pipe(jshint.reporter('fail'));
 });
@@ -23,7 +24,7 @@ gulp.task('concat:and:minify:scripts', ['lint'], () => {
     return gulp.src(['node_modules/jquery/dist/jquery.js', 'node_modules/bootstrap/dist/js/bootstrap.js', 'src/hangman.js'])
         .pipe(sourcemaps.init())
         .pipe(concat('site.min.js'))
-        .pipe(uglify({preserveComments: 'license'}).on('error', gutil.log))
+        .pipe(minifier({preserveComments: 'license'}, harmony).on('error', gutil.log))
         .pipe(sourcemaps.write('maps'))
         .pipe(gulp.dest('dist/scripts'));
 });
